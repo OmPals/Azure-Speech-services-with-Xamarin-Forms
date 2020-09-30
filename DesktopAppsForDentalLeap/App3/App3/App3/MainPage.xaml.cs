@@ -19,11 +19,11 @@ namespace App3
 	// by visiting https://aka.ms/xamarinforms-previewer
 	public partial class MainPage : ContentPage
 	{
-		static string _storageConnection = "DefaultEndpointsProtocol=https;AccountName=audiorecordings;AccountKey=YxDLh1+Ur1HGbP0xpaycpm+Y5CX/4+MPZSjHUpwsT3Nc4wdgQrxSMkGkdTYc320/Kcf4X0OIiejlZnyljyyy2A==;EndpointSuffix=core.windows.net";
+		static string _storageConnection = /*Storage connection Key Here*/;
 		static CloudStorageAccount cloudStorageAccount = CloudStorageAccount.Parse(_storageConnection);
 		static CloudBlobClient cloudBlobClient = cloudStorageAccount.CreateCloudBlobClient();
 		static CloudBlobContainer cloudBlobContainer = cloudBlobClient.GetContainerReference("audio");
-		const string ServiceBusConnectionString = "Endpoint=sb://client-to-function-bus.servicebus.windows.net/;SharedAccessKeyName=user1;SharedAccessKey=chvCXMcWYQuiL4CKvOOq2L4r7wwM/7ihhcLTTdwMNFA=";
+		const string ServiceBusConnectionString = /*Service Bus Connection String here*/;
 		const string QueueName = "queue1";
 		static IQueueClient queueClient;
 
