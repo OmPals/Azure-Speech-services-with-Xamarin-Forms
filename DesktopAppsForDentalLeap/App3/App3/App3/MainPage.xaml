@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App3.MainPage">
+
+    <ContentPage.Content>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Label Text="Audio Recording App" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Large" />
+            <Label Grid.Row="1" x:Name="StopWatchTime" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Large" />
+            <Button Grid.Row="2" HorizontalOptions="Center" VerticalOptions="Center" Text="Record" x:Name="RecordBtn" Clicked="RecordBtn_Clicked" />
+
+            <Grid Grid.Row="3" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button HorizontalOptions="Center" VerticalOptions="Center" Text="Play" x:Name="PlayBtn" Clicked="PlayBtn_Clicked" IsEnabled="False" />
+                <Button Grid.Column="1" HorizontalOptions="Center"  VerticalOptions="Center" Text="Pause" x:Name="PauseAudioBtn" Clicked="PauseAudioBtn_Clicked" IsEnabled="False" />
+            </Grid>
+            <Grid Grid.Row="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Text="Upload to Azure Blob" HorizontalOptions="Center" VerticalOptions="Center" x:Name="SaveBtn" Clicked="SaveBtn_Clicked" IsEnabled="False" />
+                <Button Grid.Column="1" Text="Discard" HorizontalOptions="Center" VerticalOptions="Center" x:Name="DiscardBtn" Clicked="DiscardBtn_Clicked" IsEnabled="False" />
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+
+</ContentPage>
