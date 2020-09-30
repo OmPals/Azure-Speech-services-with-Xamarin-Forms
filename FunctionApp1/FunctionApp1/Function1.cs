@@ -18,7 +18,7 @@ namespace FunctionApp1
         public static string Run([ServiceBusTrigger("queue1", Connection = "AzureWebJobsStorage")]string myQueueItem, ILogger log)
         {
             log.LogInformation($"C# ServiceBus queue trigger function processed message: {myQueueItem}");
-            const string SubscriptionKey = "798187bbd5d24285bb7cb71aff5f08f1";
+            const string SubscriptionKey = /*Your Subscription key here*/;
 
             // Update with your service region
             const string Region = "eastus";
